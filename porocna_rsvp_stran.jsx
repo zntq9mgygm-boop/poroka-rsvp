@@ -124,31 +124,3 @@ menus:selectedMenus
 
 </body>
 </html>
-
-<!--
-KAKO OBJAVIŠ STRAN (BREZ GITHUBA)
-
-1. Pojdi na https://app.netlify.com/drop
-2. To datoteko shrani kot index.html
-3. Povleci datoteko na Netlify stran (drag & drop)
-4. Takoj dobiš svoj link
-
-KAKO POVEŽEŠ Z GOOGLE SHEETS
-
-1. Ustvari Google Sheet
-2. Extensions → Apps Script
-3. Prilepi to kodo:
-
-function doPost(e){
-const sheet = SpreadsheetApp.getActiveSheet();
-const data = JSON.parse(e.postData.contents);
-sheet.appendRow([new Date(), data.name, data.attendance, data.adults, data.children, data.menus]);
-return ContentService.createTextOutput("OK");
-}
-
-4. Deploy → New deployment → Web app
-5. Access: Anyone
-6. Kopiraj URL in ga prilepi zgoraj namesto TUKAJ_PRILEPI_SVOJ_GOOGLE_SCRIPT_LINK
-
-Potem se vsi odgovori avtomatsko shranjujejo v tabelo.
--->
